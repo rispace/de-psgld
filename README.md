@@ -1,5 +1,15 @@
 # Decentralized Proximal Stochastic Gradient Langevin Dynamics  
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?logo=jupyter&logoColor=white)](experiments/)
+[![NumPy](https://img.shields.io/badge/NumPy-2.x-013243?logo=numpy&logoColor=white)](https://numpy.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?logo=scipy&logoColor=white)](https://scipy.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/rispace/de-psgld)](https://github.com/rispace/de-psgld/commits/main)
+[![Repo size](https://img.shields.io/github/repo-size/rispace/de-psgld)](https://github.com/rispace/de-psgld)
+[![Website](https://img.shields.io/badge/Website-rispace.github.io-0A66C2)](https://rispace.github.io)
+
 **Authors** Mohammad Rafiqul Islam, Lingjiong Zhu  
 
 Code for the numerical experiments of the paper *Decentralized Proximal Stochastic Gradient Langevin Dynamics* (DE-PSGLD).
