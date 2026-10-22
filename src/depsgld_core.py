@@ -39,7 +39,7 @@ def mixing_matrix(kind, N):
     A = adjacency(kind, N)
     deg = A.sum(1)
     L = np.diag(deg) - A
-    W = np.eye(N) - L / (deg.max() + 1.0)
+    W = np.eye(N) - L / (deg.max() + 2.0)
     ev = np.sort(np.linalg.eigvalsh(W))[::-1]
     rho = max(abs(ev[1]), abs(ev[-1])) if N > 1 else 0.0
     return W, rho, ev[-1]
