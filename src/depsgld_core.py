@@ -30,7 +30,7 @@ def adjacency(kind, N):
 
 
 def mixing_matrix(kind, N):
-    """W = I - delta L with delta = 1/(d_max + 1).
+    """W = I - delta L with delta = 1/(d_max + 2).
 
     Returns (W, rho, lambda_N(W)), where rho = max(|lambda_2|, |lambda_N|).
     Since lambda_N(L) <= 2 d_max, we have 0 < delta < 2/lambda_N(L), so W is symmetric,
