@@ -18,7 +18,7 @@ ADULT_COLS = ["age", "workclass", "fnlwgt", "education", "education_num", "marit
               "hours_per_week", "native_country", "income"]
 
 
-def load_adult(path=DATA_DIR / "adult-all.csv", test_size=0.2, seed=0):
+def load_adult(path=DATA_DIR / "adult-all.csv", train_size=36180, seed=0):
     """Adult data: drop records with missing values (45,222 remain), take log(1+x) of the
     capital variables, standardize the numerical features, one-hot encode the categorical
     features (drop first), add an intercept, and make a stratified train/test split.
@@ -35,7 +35,7 @@ def load_adult(path=DATA_DIR / "adult-all.csv", test_size=0.2, seed=0):
     cat = ["workclass", "marital_status", "occupation", "relationship", "race", "sex",
            "native_country"]
     X = pd.get_dummies(df[num + cat], columns=cat, drop_first=True, dtype=float)
-    Xtr, Xte, ytr, yte = train_test_split(X.values, y, test_size=test_size, stratify=y,
+    Xtr, Xte, ytr, yte = train_test_split(X.values, y, train_size=train_size, stratify=y,
                                           random_state=seed)
     sc = StandardScaler().fit(Xtr)
     Xtr = np.c_[np.ones(len(Xtr)), sc.transform(Xtr)]
